@@ -30,9 +30,9 @@ class Heap:
             parentIndex = (i-1)//2
             parent = self._data[parentIndex]
             if child is not None and parent is not None:
-                if self._data[i] < self._data[parentIndex]:
-                    tmp = self._data[parentIndex]
-                    self._data[parentIndex] = self._data[i]
+                if child < parent:
+                    tmp = parent
+                    self._data[parentIndex] = child
                     self._data[i] = tmp 
             i = parentIndex
 
